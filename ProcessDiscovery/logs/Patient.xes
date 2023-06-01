@@ -1,0 +1,4894 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This file has been generated with the OpenXES library. It conforms -->
+<!-- to the XML serialization of the XES standard for log storage and -->
+<!-- management. -->
+<!-- XES standard version: 1.0 -->
+<!-- OpenXES library version: 1.0RC7 -->
+<!-- OpenXES is available from http://www.openxes.org/ -->
+<log xes.version="1.0" xes.features="nested-attributes" openxes.version="1.0RC7">
+	<extension name="Organizational" prefix="org" uri="http://www.xes-standard.org/org.xesext"/>
+	<extension name="Time" prefix="time" uri="http://www.xes-standard.org/time.xesext"/>
+	<extension name="Concept" prefix="concept" uri="http://www.xes-standard.org/concept.xesext"/>
+	<extension name="Identity" prefix="identity" uri="http://www.xes-standard.org/identity.xesext"/>
+	<string key="concept:name" value="Log for Patient"/>
+	<trace>
+		<string key="concept:name" value="case_231"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_256"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:27:08.005+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_259"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:28:04.225+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_262"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:28:13.794+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_201"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_220"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:21:45.420+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_223"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:22:08.517+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_771"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_886"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:04:12.663+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_889"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:04:36.922+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_892"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:05:13.055+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_121"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_129"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:08:54.257+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_132"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:09:40.315+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_135"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:09:46.888+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_606"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_688"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:33:00.538+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_691"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:34:18.373+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_694"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:34:18.940+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_106"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_108"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:05:36.970+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_111"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:06:26.789+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_114"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:06:36.189+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_756"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_868"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:01:02.863+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_871"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:02:00.815+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_874"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:02:27.121+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_61"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_63"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T12:58:48.874+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_66"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T12:59:15.456+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_521"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_596"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:19:18.175+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_599"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:19:59.607+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_602"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:20:11.690+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_586"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_663"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:29:31.342+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_666"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:29:59.927+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_711"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_814"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:52:27.129+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_817"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:53:11.373+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_820"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:53:28.208+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_156"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_172"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:14:54.311+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_175"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:15:33.107+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_178"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:15:51.547+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_446"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_515"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:07:42.679+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_518"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:08:10.112+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_321"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_364"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:44:22.165+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_367"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:45:01.532+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_766"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_882"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:03:42.689+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_885"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:04:11.695+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_826"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_948"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:13:37.510+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_951"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:14:23.284+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_161"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_179"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:15:52.787+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_182"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:16:27.038+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_185"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:16:48.033+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_101"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_101"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:04:31.007+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_104"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:05:08.579+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_107"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:05:33.129+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_976"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1107"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:37:30.367+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_1110"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:38:26.740+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_1113"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:38:37.314+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_126"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_136"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:09:51.254+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_139"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:10:15.409+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_6"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_4"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T12:49:52.343+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_7"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T12:50:22.679+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_141"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_154"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:12:36.640+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_157"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:13:02.395+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_160"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:13:23.456+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_616"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_702"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:35:31.511+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_705"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:36:15.277+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_708"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:36:47.991+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_631"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_723"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:38:57.129+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_726"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:39:25.346+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_331"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_375"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:46:11.969+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_378"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:47:00.586+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_381"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:47:17.883+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_471"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_544"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:12:18.910+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_547"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:12:46.834+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_736"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_843"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:56:49.019+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_846"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:57:32.642+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_849"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:57:45.796+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_796"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_915"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:08:38.446+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_918"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:09:29.306+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_921"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:09:47.159+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_651"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_748"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:42:41.934+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_751"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:43:16.816+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_981"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1114"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:38:40.308+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_1117"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:39:16.035+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_381"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_442"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:56:53.766+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_445"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:57:22.274+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_611"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_695"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:34:19.471+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_698"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:35:25.192+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_701"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:35:29.546+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_151"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_168"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:14:22.561+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_171"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:14:52.543+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_636"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_727"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:39:29.699+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_730"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:40:00.705+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_733"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:40:39.421+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_996"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1126"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:40:14.941+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_1129"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:40:41.268+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_386"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_446"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:57:26.012+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_449"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:58:12.281+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_452"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:58:31.483+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_601"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_681"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:31:55.564+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_684"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:32:38.864+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_687"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:32:58.733+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_626"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_716"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:37:55.752+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_719"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:38:51.453+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_722"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:38:55.783+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_866"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_989"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:19:30.370+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_992"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:19:51.080+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_995"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:20:19.802+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_206"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_224"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:22:09.459+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_227"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:22:49.102+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_230"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:23:14.363+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_841"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_966"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:16:47.224+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_969"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:17:06.518+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_211"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_231"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:23:16.402+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_234"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:24:10.736+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_237"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:24:18.927+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_861"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_985"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:18:50.662+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_988"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:19:25.942+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_716"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_821"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:53:30.839+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_824"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:53:54.712+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_481"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_552"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:13:16.437+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_555"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:14:03.059+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_558"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:14:22.818+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_971"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1100"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:36:23.684+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_1103"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:37:06.098+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_1106"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:37:29.415+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_671"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_770"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:45:58.450+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_773"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:46:28.761+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_776"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:47:00.959+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_356"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_407"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:51:09.615+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_410"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:51:44.685+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_413"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:52:00.267+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_396"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_460"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:59:50.351+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_463"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:00:38.241+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_466"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:00:56.876+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_76"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_75"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:00:29.148+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_78"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:01:03.250+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_41"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_44"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T12:56:03.312+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_47"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T12:56:30.228+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_926"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1049"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:28:23.588+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_1052"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:28:35.943+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_1055"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:29:08.083+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_956"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1085"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:34:10.576+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_1088"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:34:51.574+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_1091"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:35:13.544+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_316"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_357"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:43:10.098+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_360"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:44:05.017+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_363"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:44:19.469+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_171"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_190"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:17:19.009+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_193"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:17:52.662+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_941"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1067"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:30:36.993+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_1070"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:31:14.967+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_946"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1071"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:31:19.183+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_1074"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:32:27.011+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_1077"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:32:38.207+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_916"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1038"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:26:41.159+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_1041"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:27:14.292+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_1"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_0"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T12:49:27.397+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_3"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T12:49:49.866+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_641"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_734"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:40:41.746+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_737"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:41:37.476+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_740"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:41:48.380+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_196"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_216"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:21:18.016+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_219"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:21:44.841+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_556"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_630"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:24:09.439+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_633"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:25:03.978+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_636"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:25:18.067+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_681"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_784"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:48:00.756+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_787"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:48:24.240+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_391"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_453"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:58:32.722+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_456"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:59:40.002+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_459"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:59:45.605+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_191"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_212"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:20:44.464+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_215"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:21:15.990+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_931"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1056"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:29:08.584+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_1059"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:29:37.682+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_596"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_674"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:31:02.940+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_677"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:31:50.385+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_680"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:31:50.935+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_811"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_930"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:10:57.333+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_933"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:11:50.718+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_936"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:11:57.502+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_71"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_71"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T12:59:58.697+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_74"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:00:27.516+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_66"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_67"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T12:59:16.548+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_70"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T12:59:58.408+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_801"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_922"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:09:51.465+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_925"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:10:28.801+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_816"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_937"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:11:58.314+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_940"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:12:44.390+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_943"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:13:05.809+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_91"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_87"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:02:18.398+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_90"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:03:15.251+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_93"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:03:23.357+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_551"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_626"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:23:27.676+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_629"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:24:05.743+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_371"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_428"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:54:19.528+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_431"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:55:08.780+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_434"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:55:30.506+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_511"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_582"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:17:16.624+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_585"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:18:10.910+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_588"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:18:21.388+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_486"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_559"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:14:23.726+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_562"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:14:47.553+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_541"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_618"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:22:33.135+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_621"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:23:04.038+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_451"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_519"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:08:13.639+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_522"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:08:43.153+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_525"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:08:57.764+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_221"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_242"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:25:00.113+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_245"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:25:26.082+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_248"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:25:57.136+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_821"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_944"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:13:07.883+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_947"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:13:37.298+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_351"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_403"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:50:33.147+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_406"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:51:07.730+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_301"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_339"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:40:03.184+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_342"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:40:31.405+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_166"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_186"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:16:49.187+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_189"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:17:14.942+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_426"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_490"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:04:25.849+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_493"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:05:13.988+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_496"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:05:27.283+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_591"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_667"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:30:02.552+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_670"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:30:40.453+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_673"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:30:58.851+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_456"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_526"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:08:59.193+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_529"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:09:45.988+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_646"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_741"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:41:50.460+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_744"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:42:13.928+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_747"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:42:39.474+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_661"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_759"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:44:14.679+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_762"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:44:58.023+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_765"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:45:25.604+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_536"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_614"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:21:59.401+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_617"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:22:32.047+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_96"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_94"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:03:25.835+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_97"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:04:19.838+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_100"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:04:28.644+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_311"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_350"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:41:50.060+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_353"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:42:53.029+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_356"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:43:09.122+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_181"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_198"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:18:25.332+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_201"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:19:25.500+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_204"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:19:27.758+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_501"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_571"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:15:36.456+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_574"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:16:17.811+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_577"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:16:42.621+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_461"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_530"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:09:47.070+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_533"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:10:31.361+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_536"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:11:01.435+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_436"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_504"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:06:22.479+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_507"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:06:50.596+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_176"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_194"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:17:56.290+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_197"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:18:24.580+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_886"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1011"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:22:45.103+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_1014"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:23:08.159+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_466"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_537"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:11:03.408+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_540"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:11:54.952+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_543"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:12:14.462+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_146"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_161"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:13:24.911+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_164"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:13:58.566+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_167"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:14:20.702+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_376"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_435"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:55:34.307+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_438"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:56:27.771+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_441"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:56:50.569+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_851"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_977"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:18:01.249+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_980"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:18:18.745+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_496"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_567"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:15:16.538+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_570"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:15:34.795+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_726"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_832"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:55:08.829+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_835"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:56:01.930+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_838"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:56:12.385+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_226"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_249"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:25:58.930+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_252"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:26:52.061+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_255"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:27:04.664+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_906"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1030"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:25:39.315+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_1033"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:26:10.230+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_831"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_952"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:14:23.857+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_955"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:15:10.879+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_958"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:15:33.619+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_581"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_656"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:28:08.078+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_659"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:29:08.282+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_662"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:29:29.728+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_686"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_788"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:48:24.248+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_791"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:49:11.145+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_16"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_15"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T12:51:42.117+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_18"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T12:52:06.679+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_546"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_622"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:23:05.637+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_625"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:23:25.234+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_361"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_414"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:52:04.087+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_417"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:52:41.633+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_420"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:53:11.799+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_401"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_467"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:00:57.496+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_470"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:01:18.533+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_761"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_875"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:02:31.881+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_878"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:02:53.770+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_881"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:03:38.479+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_731"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_839"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:56:16.479+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_842"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:56:48.016+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_116"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_122"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:07:55.785+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_125"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:08:41.932+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_128"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:08:51.910+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_341"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_389"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:48:24.348+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_392"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:48:57.169+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_395"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:49:27.727+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_571"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_645"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:26:25.918+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_648"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:27:16.577+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_651"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:27:30.990+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_786"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_904"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:07:07.146+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_907"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:07:25.940+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_921"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1042"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:27:18.206+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_1045"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:27:52.149+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_1048"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:28:19.652+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_271"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_300"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:33:58.490+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_303"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:34:23.053+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_306"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:35:14.077+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_936"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1060"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:29:39.090+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_1063"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:30:24.354+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_1066"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:30:32.157+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_696"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_799"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:50:20.200+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_802"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:50:51.879+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_986"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1118"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:39:17.121+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_1121"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:39:42.414+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_286"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_318"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:36:27.619+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_321"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:37:22.962+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_324"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:37:32.793+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_186"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_205"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:19:27.985+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_208"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:20:39.139+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_211"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:20:41.309+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_526"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_603"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:20:14.963+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_606"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:21:04.612+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_609"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:21:24.601+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_266"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_296"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:33:23.783+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_299"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:33:54.652+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_781"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_897"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:05:48.815+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_900"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:06:43.905+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_903"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:07:02.562+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_516"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_589"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:18:22.339+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_592"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:19:09.314+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_595"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:19:15.214+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_366"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_421"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:53:14.630+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_424"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:54:06.949+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_427"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:54:19.140+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_276"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_307"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:35:16.242+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_310"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:35:30.190+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_666"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_766"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:45:26.955+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_769"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:45:53.687+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_36"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_40"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T12:55:28.222+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_43"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T12:55:59.481+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_306"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_343"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:40:31.871+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_346"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:41:41.943+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_349"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:41:45.402+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_561"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_637"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:25:21.710+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_640"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:25:48.238+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_911"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1034"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:26:14.839+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_1037"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:26:38.153+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_701"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_803"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:50:54.777+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_806"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:51:30.738+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_809"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:51:51.609+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_746"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_857"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:59:17.451+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_860"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:00:11.581+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_863"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:00:12.298+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_506"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_578"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:16:47.529+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_581"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:17:12.793+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_216"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_238"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:24:22.754+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_241"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:24:55.225+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_241"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_267"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:29:01.621+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_270"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:30:05.922+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_273"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:30:10.921+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_251"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_278"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:30:45.333+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_281"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:31:55.633+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_284"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:32:01.790+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_961"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1092"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:35:16.397+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_1095"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:35:43.621+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_51"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_52"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T12:56:58.661+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_55"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T12:57:34.493+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_531"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_610"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:21:29.158+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_613"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:21:58.368+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_721"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_825"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:53:56.243+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_828"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:54:55.349+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_831"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:55:04.338+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_706"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_810"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:51:53.654+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_813"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:52:25.632+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_846"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_970"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:17:09.110+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_973"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:17:55.265+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_976"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:17:58.089+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_406"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_471"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:01:21.450+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_474"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:01:53.167+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_336"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_382"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:47:21.532+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_385"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:48:14.130+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_388"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:48:23.822+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_966"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1096"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:35:45.883+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_1099"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:36:23.545+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_31"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_33"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T12:54:26.156+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_36"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T12:54:58.924+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_39"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T12:55:23.738+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_621"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_709"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:36:52.266+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_712"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:37:43.707+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_715"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:37:55.311+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_56"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_56"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T12:57:38.424+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_59"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T12:58:34.527+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_62"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T12:58:44.095+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_991"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1122"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:39:43.409+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_1125"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:40:12.203+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_246"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_274"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:30:13.404+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_277"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:30:44.234+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_261"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_289"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:32:27.730+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_292"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:32:57.241+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_295"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:33:21.027+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_896"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1019"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:23:44.067+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_1022"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:24:20.451+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_741"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_850"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:57:49.544+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_853"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:59:04.430+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_856"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:59:15.554+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_441"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_508"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:06:53.280+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_511"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:07:21.141+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_514"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:07:39.187+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_751"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_864"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:00:14.853+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_867"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:01:01.921+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_676"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_777"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:47:04.945+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_780"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:47:26.737+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_783"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:47:57.378+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_871"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_996"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:20:22.054+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_999"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:20:53.289+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_656"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_752"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:43:20.100+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_755"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:44:08.441+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_758"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:44:14.390+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_691"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_792"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:49:15.642+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_795"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:49:48.099+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_798"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:50:19.103+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_291"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_325"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:37:33.112+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_328"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:38:20.103+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_331"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:38:38.237+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_891"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1015"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:23:12.930+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_1018"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:23:40.327+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_81"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_79"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:01:07.967+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_82"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:01:35.181+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_131"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_140"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:10:17.009+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_143"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:11:05.871+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_146"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:11:33.532+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_856"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_981"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:18:23.674+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_984"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:18:50.076+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_326"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_368"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:45:02.858+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_371"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:45:56.154+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_374"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:46:09.522+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_776"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_893"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:05:16.829+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_896"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:05:45.262+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_46"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_48"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T12:56:32.072+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_51"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T12:56:53.706+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_11"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_8"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T12:50:22.734+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_11"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T12:51:17.390+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_14"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T12:51:37.750+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_346"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_396"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:49:29.917+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_399"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:50:04.831+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_402"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:50:33.006+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_476"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_548"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:12:49.803+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_551"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:13:15.268+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_296"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_332"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:38:41.489+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_335"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:39:46.956+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_338"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:40:00.359+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_421"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_486"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:03:46.371+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_489"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:04:23.300+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_236"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_263"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:28:17.407+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_266"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:28:56.881+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_21"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_19"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T12:52:07.594+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_22"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T12:52:49.471+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_25"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T12:53:17.952+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_111"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_115"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:06:40.280+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_118"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:07:24.344+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_121"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:07:54.543+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_951"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1078"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:32:43.104+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_1081"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:33:34.241+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_1084"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:34:07.790+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_806"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_926"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:10:31.710+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_929"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:10:54.941+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_136"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_147"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:11:35.403+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_150"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:12:16.720+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_153"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:12:33.306+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_881"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1004"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:21:23.450+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_1007"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:22:12.426+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_1010"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:22:40.573+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_411"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_475"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:01:57.147+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_478"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:02:45.270+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_481"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:03:08.411+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_566"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_641"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:25:48.274+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_644"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:26:25.366+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_416"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_482"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:03:10.089+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_485"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:03:42.579+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_576"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_652"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:27:35.416+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_655"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:28:05.230+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_491"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_563"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:14:48.292+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_566"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T14:15:15.174+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_256"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_285"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:32:02.944+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_288"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:32:25.532+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_901"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1023"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:24:24.371+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_1026"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:25:17.073+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_1029"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:25:36.869+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_431"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_497"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T14:05:27.923+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_500"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T14:05:57.320+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_503"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T14:06:18.375+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_86"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_83"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:01:35.487+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_86"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T13:02:14.078+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_836"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_959"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:15:33.877+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_962"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:16:28.111+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_965"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:16:45.390+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_281"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_311"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T13:35:35.187+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_314"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T13:35:58.231+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_317"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T13:36:24.278+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_876"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_1000"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:20:54.233+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="prescription_1003"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive prescription"/>
+			<date key="time:timestamp" value="2023-05-27T15:21:22.271+02:00"/>
+			<string key="msgName" value="prescription"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_26"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_26"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T12:53:19.198+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_29"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T12:53:54.927+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_32"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T12:54:25.219+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+	<trace>
+		<string key="concept:name" value="case_791"/>
+		<list key="Data Objects"/>
+		<event>
+			<string key="msgInstanceId" value="disease_908"/>
+			<string key="msgRole" value="send"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Communicate disease"/>
+			<date key="time:timestamp" value="2023-05-27T15:07:28.906+02:00"/>
+			<string key="msgName" value="disease"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="hospitalisation_911"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Hospitalisation needed"/>
+			<date key="time:timestamp" value="2023-05-27T15:08:35.155+02:00"/>
+			<string key="msgName" value="hospitalisation"/>
+		</event>
+		<event>
+			<string key="msgInstanceId" value="admission_914"/>
+			<string key="msgRole" value="receive"/>
+			<string key="org:group" value="Patient"/>
+			<string key="concept:name" value="Receive admission info"/>
+			<date key="time:timestamp" value="2023-05-27T15:08:37.592+02:00"/>
+			<string key="msgName" value="admission"/>
+		</event>
+	</trace>
+</log>
