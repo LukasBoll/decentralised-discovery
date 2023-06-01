@@ -22,6 +22,11 @@ public class Routing {
     public Routing() {
     }
 
+    public Routing(String organizationId, String address) {
+        this.organizationId = organizationId;
+        this.address = address;
+    }
+
     public String getId() {
         return id;
     }

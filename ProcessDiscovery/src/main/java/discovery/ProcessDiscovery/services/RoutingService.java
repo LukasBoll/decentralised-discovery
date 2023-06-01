@@ -4,6 +4,7 @@ import discovery.ProcessDiscovery.models.Organization;
 import discovery.ProcessDiscovery.models.Routing;
 import discovery.ProcessDiscovery.repositories.RoutingRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 @Service
 public class RoutingService {
@@ -14,8 +15,15 @@ public class RoutingService {
         this.routingRepository = routingRepository;
     }
 
-    public Routing getAddress(Organization o){
-        return routingRepository.findFirstByOrganizationId(o.getId());
+    public String getAddress(Organization o) {
+        Routing routing = routingRepository.findFirstByOrganizationId(o.getId());
+        if (routing == null) {
+            RestTemplate restTemplate = new RestTemplate();
+            String result = restTemplate.getForObject(o.getAddress() + "/collaborationconfig/getaddress", String.class);
+            if (result != null) {
+                routing = routingRepository.save(new Routing(o.getId(),result));
+            }
+        }
+        return routing!=null?routing.getAddress():null;
     }
-
 }
