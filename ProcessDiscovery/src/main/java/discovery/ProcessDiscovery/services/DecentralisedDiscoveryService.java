@@ -154,9 +154,9 @@ public class DecentralisedDiscoveryService {
         List<Organization> organizations = authorizationRepository.findAll();
 
         organizations.stream().map(routingService::getAddress).collect(Collectors.toList()).stream().filter(Objects::nonNull).forEach(
-                (routing -> {
+                (address -> {
                     RestTemplate restTemplate = new RestTemplate();
-                    CommunicationEvent[] result = restTemplate.getForObject(routing.getAddress() + "/collaboration/communicationevent", CommunicationEvent[].class, Map.of("id", applicationID));
+                    CommunicationEvent[] result = restTemplate.getForObject(address + "/collaboration/communicationevent", CommunicationEvent[].class, Map.of("id", applicationID));
                     if (result != null) {
                         communicationEventRepository.saveAll(Arrays.stream(result).toList());
                     }
@@ -233,7 +233,7 @@ public class DecentralisedDiscoveryService {
                 ).collect(Collectors.toList());
 
             Organization organizationToRequest = authorizationRepository.getReferenceById(organizationToRequestId);
-            Routing address = routingService.getAddress(organizationToRequest);
+            String address = routingService.getAddress(organizationToRequest);
 
             RestTemplate restTemplate = new RestTemplate();
             CollaborationDiscoverResponse result = restTemplate.postForObject(address + "/collaboration/discover", entryPoints,CollaborationDiscoverResponse.class);
