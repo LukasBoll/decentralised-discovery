@@ -1,19 +1,23 @@
 package discovery.ProcessDiscovery.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+
+import java.util.UUID;
 
 @Entity
 public class Routing {
 
     @Id
-    private String id;
+    @GeneratedValue
+    private UUID id;
 
     private String organizationId;
 
     private String address;
 
-    public Routing(String id, String organizationId, String address) {
+    public Routing(UUID id, String organizationId, String address) {
         this.id = id;
         this.organizationId = organizationId;
         this.address = address;
@@ -27,11 +31,11 @@ public class Routing {
         this.address = address;
     }
 
-    public String getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 

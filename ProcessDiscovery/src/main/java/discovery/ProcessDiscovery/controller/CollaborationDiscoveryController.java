@@ -25,8 +25,8 @@ public class CollaborationDiscoveryController {
         return new CollaborationDiscoverResponse();
     }
 
-    @GetMapping("/collaboration/communicationevent")
-    public List<CommunicationEvent> getMessages(@RequestParam String id) throws IOException {
-        return decentralisedDiscoveryService.getCommunicationEvents(id);
+    @RequestMapping(value = "/collaboration/communicationevent/{decisionId}", method = RequestMethod.GET)
+    public List<CommunicationEvent> getMessages(@PathVariable String decisionId) throws IOException {
+        return decentralisedDiscoveryService.getCommunicationEvents(decisionId);
     }
 }
