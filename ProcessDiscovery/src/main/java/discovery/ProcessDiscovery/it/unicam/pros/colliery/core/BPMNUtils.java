@@ -173,7 +173,7 @@ public class BPMNUtils {
 
     public static String groupProcesses(List<String> processesXML) {
         String baseDoc = processesXML.iterator().next();
-        processesXML.remove(baseDoc);
+        processesXML.remove(processesXML.iterator().next());
         Document collaboration = XESUtils.convertStringToXMLDocument(baseDoc);
         Boundaries firstPoolBoundaries = diToZero(collaboration);
         double lowerY = firstPoolBoundaries.yMax +50;
@@ -349,10 +349,14 @@ public class BPMNUtils {
 
     public static String makeMsgFlow(String xml, String msg, String source, String target) {
         Document dom  = XESUtils.convertStringToXMLDocument(xml);
+        return XESUtils.convertXMLToString(makeMsgFlow(dom,msg,source,target));
+    }
+
+    public static Document makeMsgFlow(Document dom, String msg, String source, String target) {
 
         Node sou = XESUtils.findProcNode(dom, "*" ,"name", source);
         Node tar = XESUtils.findProcNode(dom, "*","name", target);
-        if(sou == null || tar == null) return xml;
+        if(sou == null || tar == null) return dom;
         String sID = sou.getAttributes().getNamedItem("id").getNodeValue();
         String tID = tar.getAttributes().getNamedItem("id").getNodeValue();
         sou = XESUtils.findByExpr(dom, "/definitions/BPMNDiagram/BPMNPlane/BPMNShape[@bpmnElement=\""+sID+"\"]/Bounds").item(0);
@@ -378,7 +382,7 @@ public class BPMNUtils {
         XESUtils.findByExpr(dom, "/definitions/collaboration").item(0).appendChild(newMessage);
         XESUtils.findByExpr(dom, "/definitions/BPMNDiagram/BPMNPlane").item(0).appendChild(newEdge);
 
-        return XESUtils.convertXMLToString(dom);
+        return dom;
     }
 
 
