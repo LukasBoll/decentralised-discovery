@@ -38,7 +38,7 @@ public class CollaborationDiscoveryController {
 
         Organization organization = authenticationService.getOrganizationFromJwtToken(token);
 
-        Document model = switch (organization.getOrganizationAuthorization()) {
+        Document model = switch (organization.getAuthorizationEnum()) {
             case PRIVATE -> decentralisedDiscoveryService.getPrivateModel();
             case PUBLIC -> decentralisedDiscoveryService.getPublicModel();
             default -> null;
@@ -50,6 +50,8 @@ public class CollaborationDiscoveryController {
 
     @RequestMapping(value = "/collaboration/communicationevent", method = RequestMethod.GET)
     public List<CommunicationEvent> degCommunicationEvent(@RequestHeader(name = "Authorization") String token) throws IOException {
+        System.out.println(authenticationService.generateJwtToken());
+
         return decentralisedDiscoveryService.getCommunicationEvents(authenticationService.getOrganizationIDFromJwtToken(token));
     }
 }

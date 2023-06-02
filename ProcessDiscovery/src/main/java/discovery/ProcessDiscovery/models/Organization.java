@@ -53,19 +53,19 @@ public class Organization {
         this.name = name;
     }
 
-    public AuthorizationEnum getOrganizationAuthorization() {
-        return authorizationEnum;
-    }
-
-    public void setOrganizationAuthorization(AuthorizationEnum authorizationEnum) {
-        this.authorizationEnum = authorizationEnum;
-    }
-
     public String getToken() {
         return token;
     }
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public AuthorizationEnum getAuthorizationEnum() {
+        return authorizationEnum;
+    }
+
+    public void setAuthorizationEnum(AuthorizationEnum authorizationEnum) {
+        this.authorizationEnum = authorizationEnum;
     }
 }
