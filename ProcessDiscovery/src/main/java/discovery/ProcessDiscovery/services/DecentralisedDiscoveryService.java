@@ -156,7 +156,7 @@ public class DecentralisedDiscoveryService {
         organizations.stream().map(routingService::getAddress).collect(Collectors.toList()).stream().filter(Objects::nonNull).forEach(
                 (address -> {
                     RestTemplate restTemplate = new RestTemplate();
-                    CommunicationEvent[] result = restTemplate.getForObject(address + "/collaboration/communicationevent", CommunicationEvent[].class, Map.of("id", applicationID));
+                    CommunicationEvent[] result = restTemplate.getForObject(address + "/collaboration/communicationevent/{id}", CommunicationEvent[].class, Map.of("id", applicationID));
                     if (result != null) {
                         communicationEventRepository.saveAll(Arrays.stream(result).toList());
                     }
