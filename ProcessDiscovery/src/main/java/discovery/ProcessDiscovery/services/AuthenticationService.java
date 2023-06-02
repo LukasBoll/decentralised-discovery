@@ -25,8 +25,9 @@ public class AuthenticationService {
 
     public String getOrganizationIDFromJwtToken(String token) {
         System.out.println(token);
+        System.out.println(token.substring(7));
         return Jwts.parserBuilder().setSigningKey(key()).build()
-                .parseClaimsJws(token).getBody().getSubject();
+                .parseClaimsJws(token.substring(7)).getBody().getSubject();
     }
 
     private Key key() {
@@ -36,7 +37,7 @@ public class AuthenticationService {
     public String generateJwtToken() {
 
         return Jwts.builder()
-                .setSubject(("CarManufacturerID"))
+                .setSubject(("SupplierID"))
                 .signWith(key(), SignatureAlgorithm.HS256)
                 .compact();
     }
