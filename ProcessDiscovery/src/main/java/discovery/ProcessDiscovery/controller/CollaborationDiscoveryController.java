@@ -27,7 +27,7 @@ public class CollaborationDiscoveryController {
         this.messageFlowRepository = messageFlowRepository;
     }
 
-    @GetMapping("/collaboration/discover")
+    @PostMapping("/collaboration/discover")
     public CollaborationDiscoverResponse discover(@RequestBody List<String> entryPoints) throws ParserConfigurationException, IOException, SAXException {
         System.out.println("Discover");
         Document model = decentralisedDiscoveryService.getPrivateModel();
@@ -36,7 +36,7 @@ public class CollaborationDiscoveryController {
     }
 
     @RequestMapping(value = "/collaboration/communicationevent/{decisionId}", method = RequestMethod.GET)
-    public List<CommunicationEvent> getMessages(@PathVariable String decisionId) throws IOException {
+    public List<CommunicationEvent> degCommunicationEvent(@PathVariable String decisionId) throws IOException {
         return decentralisedDiscoveryService.getCommunicationEvents(decisionId);
     }
 }
