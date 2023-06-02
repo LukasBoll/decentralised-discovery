@@ -248,7 +248,7 @@ public class DecentralisedDiscoveryService {
                     BPMNUtils.makeMsgFlow(coModel, msg.getName(), msg.getSendTask(), msg.getReceiveTask());
                 }
                 //insert newmsg
-                insertIfNotExistsInModel(unconnectedMessageMap,result.getMessageFlows(),coModel);
+                //insertIfNotExistsInModel(unconnectedMessageMap,result.getMessageFlows(),coModel);
             }
             unconnectedMessageMap.remove(organizationToRequestId);
         }
@@ -280,13 +280,13 @@ public class DecentralisedDiscoveryService {
                     if (map.get(messageFlow.getReceiver()) != null) {
                         map.get(messageFlow.getReceiver()).add(messageFlow);
                     } else {
-                        map.put(messageFlow.getReceiver(), List.of(messageFlow));
+                        map.put(messageFlow.getReceiver(), new LinkedList<>(List.of(messageFlow)));
                     }
-                } else if (!XmlUtil.isInTasks(messageFlow.getSendTask(), tasks)) {
-                    if (map.get(messageFlow.getSendTask()) != null) {
-                        map.get(messageFlow.getSendTask()).add(messageFlow);
+                } else if (!XmlUtil.isInTasks(messageFlow.getSender(), tasks)) {
+                    if (map.get(messageFlow.getSender()) != null) {
+                        map.get(messageFlow.getSender()).add(messageFlow);
                     } else {
-                        map.put(messageFlow.getSendTask(), List.of(messageFlow));
+                        map.put(messageFlow.getSender(), new LinkedList<>(List.of(messageFlow)));
                     }
                 }
             }
