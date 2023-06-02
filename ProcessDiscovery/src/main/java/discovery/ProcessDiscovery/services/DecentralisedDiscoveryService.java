@@ -274,7 +274,7 @@ public class DecentralisedDiscoveryService {
                     } else {
                         map.put(messageFlow.getReceiver(), new LinkedList<>(List.of(messageFlow)));
                     }
-                } else if (!XmlUtil.isInTasks(messageFlow.getSender(), tasks)) {
+                } else if (!XmlUtil.isInTasks(messageFlow.getSendTask(), tasks)) {
                     if (map.get(messageFlow.getSender()) != null) {
                         map.get(messageFlow.getSender()).add(messageFlow);
                     } else {
