@@ -155,9 +155,9 @@ public class XESUtils {
                         case "sender":
                             sender = child.getAttributes().getNamedItem("value").getNodeValue();
                         case "receiver":
-                            organizationId = child.getAttributes().getNamedItem("value").getNodeValue();
-                        case "org:group":
                             receiver = child.getAttributes().getNamedItem("value").getNodeValue();
+                        case "org:group":
+                            organizationId = child.getAttributes().getNamedItem("value").getNodeValue();
                         default:
                             continue;
                     }
