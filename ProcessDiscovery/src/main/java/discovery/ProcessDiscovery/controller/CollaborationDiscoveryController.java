@@ -48,8 +48,8 @@ public class CollaborationDiscoveryController {
         return new CollaborationDiscoverResponse(model, messages);
     }
 
-    @RequestMapping(value = "/collaboration/communicationevent/{decisionId}", method = RequestMethod.GET)
-    public List<CommunicationEvent> degCommunicationEvent(@PathVariable String decisionId) throws IOException {
-        return decentralisedDiscoveryService.getCommunicationEvents(decisionId);
+    @RequestMapping(value = "/collaboration/communicationevent", method = RequestMethod.GET)
+    public List<CommunicationEvent> degCommunicationEvent(@RequestHeader(name = "Authorization") String token) throws IOException {
+        return decentralisedDiscoveryService.getCommunicationEvents(authenticationService.getOrganizationIDFromJwtToken(token));
     }
 }

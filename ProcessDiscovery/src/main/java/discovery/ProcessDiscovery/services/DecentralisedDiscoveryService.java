@@ -5,14 +5,17 @@ import discovery.ProcessDiscovery.models.*;
 import discovery.ProcessDiscovery.repositories.AuthorizationRepository;
 import discovery.ProcessDiscovery.repositories.CommunicationEventRepository;
 import discovery.ProcessDiscovery.repositories.MessageFlowRepository;
+import discovery.ProcessDiscovery.util.WebUtil;
 import discovery.ProcessDiscovery.util.XmlUtil;
 import org.camunda.bpm.model.bpmn.Bpmn;
 import org.camunda.bpm.model.bpmn.BpmnModelInstance;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.w3c.dom.Document;
-import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
@@ -154,12 +157,15 @@ public class DecentralisedDiscoveryService {
 
         List<Organization> organizations = authorizationRepository.findAll();
 
-        organizations.stream().map(routingService::getAddress).collect(Collectors.toList()).stream().filter(Objects::nonNull).forEach(
-                (address -> {
+        organizations.stream().filter(Objects::nonNull).forEach(
+                (organization -> {
+                    String address = routingService.getAddress(organization);
                     RestTemplate restTemplate = new RestTemplate();
-                    CommunicationEvent[] result = restTemplate.getForObject(address + "/collaboration/communicationevent/{id}", CommunicationEvent[].class, Map.of("id", applicationID));
-                    if (result != null) {
-                        communicationEventRepository.saveAll(Arrays.stream(result).toList());
+                    HttpEntity<String> entity= new HttpEntity<>("", WebUtil.generateHeaders(organization));
+
+                    ResponseEntity<CommunicationEvent[]> result = restTemplate.exchange(address + "/collaboration/communicationevent", HttpMethod.GET, entity, CommunicationEvent[].class);
+                    if (result.getBody() != null) {
+                        communicationEventRepository.saveAll(Arrays.stream(result.getBody()).toList());
                     }
                 })
         );
@@ -237,7 +243,9 @@ public class DecentralisedDiscoveryService {
             String address = routingService.getAddress(organizationToRequest);
 
             RestTemplate restTemplate = new RestTemplate();
-            CollaborationDiscoverResponse result = restTemplate.postForObject(address + "/collaboration/discover", entryPoints,CollaborationDiscoverResponse.class);
+            HttpEntity<List<String>> entity= new HttpEntity<>(entryPoints, WebUtil.generateHeaders(organizationToRequest));
+
+            CollaborationDiscoverResponse result = restTemplate.postForObject(address + "/collaboration/discover", entity ,CollaborationDiscoverResponse.class);
             if (result != null) {
                 //combineBPM
                 List<String> modelStringList = new LinkedList(List.of(XESUtils.convertXMLToString(coModel),XESUtils.convertXMLToString(result.getModel())));
