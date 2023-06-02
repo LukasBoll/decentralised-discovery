@@ -240,7 +240,6 @@ public class DecentralisedDiscoveryService {
             CollaborationDiscoverResponse result = restTemplate.postForObject(address + "/collaboration/discover", entryPoints,CollaborationDiscoverResponse.class);
             if (result != null) {
                 //combineBPM
-                //combineModels(coModel,result.getModel());
                 List<String> modelStringList = new LinkedList(List.of(XESUtils.convertXMLToString(coModel),XESUtils.convertXMLToString(result.getModel())));
                 coModel = XESUtils.convertStringToXMLDocument(BPMNUtils.groupProcesses(modelStringList));
                 //addMsg
@@ -248,28 +247,13 @@ public class DecentralisedDiscoveryService {
                     BPMNUtils.makeMsgFlow(coModel, msg.getName(), msg.getSendTask(), msg.getReceiveTask());
                 }
                 //insert newmsg
-                //insertIfNotExistsInModel(unconnectedMessageMap,result.getMessageFlows(),coModel);
+                insertIfNotExistsInModel(unconnectedMessageMap,result.getMessageFlows(),coModel);
             }
             unconnectedMessageMap.remove(organizationToRequestId);
         }
         stringToFile(new File(Path.of(System.getProperty("user.dir"), "coModel.bpmn").toString()), XESUtils.convertXMLToString(coModel));
         System.out.println("CO Model: Serialization completed at " + Path.of(System.getProperty("user.dir"),"coModel.bpmn").toString() + "\n");
         return coModel;
-    }
-
-    private void combineModels(Document coModel, Document newModel) {
-        Node process = newModel.getElementsByTagName("bpmn:process").item(0).cloneNode(true);
-        coModel.adoptNode(process);
-        coModel.getElementsByTagName("bpmn:process").item(0).getParentNode().appendChild(process);
-        Node participant =newModel.getElementsByTagName("participant").item(0).cloneNode(true);
-        coModel.adoptNode(participant);
-        coModel.getElementsByTagName("collaboration").item(0).appendChild(participant);
-
-        Node diagram = newModel.getElementsByTagName("bpmndi:BPMNDiagram").item(0).cloneNode(true);
-        coModel.adoptNode(diagram);
-        for(int i=0; i<diagram.getChildNodes().getLength();i++) {
-            coModel.getElementsByTagName("bpmndi:BPMNDiagram").item(0).appendChild(diagram.getChildNodes().item(i));
-        }
     }
 
     public void insertIfNotExistsInModel(Map<String,List<MessageFlow>> map, List<MessageFlow> unconnectedMessages,Document model){
