@@ -151,12 +151,6 @@ public class XESUtils {
                         case "eventType":
                             isMsgEvent = child.getAttributes().getNamedItem("value").getNodeValue();
                             break;
-                        case "time:timestamp":
-                            msgTime = child.getAttributes().getNamedItem("value").getNodeValue();
-                            break;
-                        case "msgProtocol":
-                            commType = (child.getAttributes().getNamedItem("value").getNodeValue().contains("Pub/Sub")) ? CommType.BROADCAST : CommType.P2P;
-                            break;
                         case "sender":
                             sender = child.getAttributes().getNamedItem("value").getNodeValue();
                             break;
@@ -165,10 +159,11 @@ public class XESUtils {
                             break;
                         case "org:group":
                             organizationId = child.getAttributes().getNamedItem("value").getNodeValue();
-                            if (!organizationId.equals("SupplierID")) {
-                                System.out.println("error here");
-                            }
                             break;
+                        case "time:timestamp":
+                            msgTime = child.getAttributes().getNamedItem("value").getNodeValue();
+                        case "msgProtocol":
+                            commType = (child.getAttributes().getNamedItem("value").getNodeValue().contains("Pub/Sub")) ? CommType.BROADCAST : CommType.P2P;
                         default:
                             continue;
                     }

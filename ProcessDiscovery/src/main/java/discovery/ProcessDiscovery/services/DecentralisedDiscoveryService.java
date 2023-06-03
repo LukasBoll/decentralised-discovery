@@ -1,5 +1,6 @@
 package discovery.ProcessDiscovery.services;
 
+import discovery.ProcessDiscovery.ProcessDiscoveryApplication;
 import discovery.ProcessDiscovery.it.unicam.pros.colliery.core.*;
 import discovery.ProcessDiscovery.models.*;
 import discovery.ProcessDiscovery.repositories.AuthorizationRepository;
@@ -268,13 +269,13 @@ public class DecentralisedDiscoveryService {
         NodeList tasks = model.getElementsByTagName("bpmn:task");
         unconnectedMessages.forEach(messageFlow -> {
             if(messageFlow.getReceiveTask()!=null && messageFlow.getSendTask()!=null) {
-                if (!XmlUtil.isInTasks(messageFlow.getReceiveTask(), tasks)) {
+                if (!XmlUtil.isInTasks(messageFlow.getReceiveTask(), tasks) && !messageFlow.getReceiver().equals(applicationID)) {
                     if (map.get(messageFlow.getReceiver()) != null) {
                         map.get(messageFlow.getReceiver()).add(messageFlow);
                     } else {
                         map.put(messageFlow.getReceiver(), new LinkedList<>(List.of(messageFlow)));
                     }
-                } else if (!XmlUtil.isInTasks(messageFlow.getSendTask(), tasks)) {
+                } else if (!XmlUtil.isInTasks(messageFlow.getSendTask(), tasks) && !messageFlow.getSender().equals(applicationID)) {
                     if (map.get(messageFlow.getSender()) != null) {
                         map.get(messageFlow.getSender()).add(messageFlow);
                     } else {
