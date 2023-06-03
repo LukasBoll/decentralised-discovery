@@ -146,4 +146,9 @@ public class XmlUtil {
             }}
         return convertGateway;
     }
+
+    public static void removeProcess(Document document) {
+        Node process = document.getElementsByTagName("bpmn:process").item(0);
+        process.getParentNode().removeChild(process);
+    }
 }

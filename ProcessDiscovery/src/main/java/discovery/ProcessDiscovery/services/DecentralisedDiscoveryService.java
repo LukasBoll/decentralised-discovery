@@ -357,4 +357,10 @@ public class DecentralisedDiscoveryService {
             }
         });
     }
+
+    public Document getMinimumModel() throws ParserConfigurationException, IOException, SAXException {
+        Document document = getPublicModel();
+        XmlUtil.removeProcess(document);
+        return document;
+    }
 }

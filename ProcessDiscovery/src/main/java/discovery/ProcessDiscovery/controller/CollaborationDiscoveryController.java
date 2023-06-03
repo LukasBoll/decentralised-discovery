@@ -1,9 +1,6 @@
 package discovery.ProcessDiscovery.controller;
 
-import discovery.ProcessDiscovery.models.CollaborationDiscoverResponse;
-import discovery.ProcessDiscovery.models.CommunicationEvent;
-import discovery.ProcessDiscovery.models.MessageFlow;
-import discovery.ProcessDiscovery.models.Organization;
+import discovery.ProcessDiscovery.models.*;
 import discovery.ProcessDiscovery.repositories.AuthorizationRepository;
 import discovery.ProcessDiscovery.repositories.MessageFlowRepository;
 import discovery.ProcessDiscovery.services.AuthenticationService;
@@ -15,6 +12,7 @@ import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @CrossOrigin
@@ -41,10 +39,15 @@ public class CollaborationDiscoveryController {
         Document model = switch (organization.getAuthorizationEnum()) {
             case PRIVATE -> decentralisedDiscoveryService.getPrivateModel();
             case PUBLIC -> decentralisedDiscoveryService.getPublicModel();
+            case MINIMUM -> decentralisedDiscoveryService.getMinimumModel();
             default -> null;
         };
 
-        List<MessageFlow> messages = messageFlowRepository.findAll();
+        List<MessageFlow> messages = new ArrayList<>();
+        if(organization.getAuthorizationEnum()== AuthorizationEnum.PRIVATE ||
+                organization.getAuthorizationEnum()== AuthorizationEnum.PUBLIC){
+            messages = messageFlowRepository.findAll();
+        }
         return new CollaborationDiscoverResponse(model, messages);
     }
 
