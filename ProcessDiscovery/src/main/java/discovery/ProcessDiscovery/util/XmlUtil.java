@@ -1,5 +1,6 @@
 package discovery.ProcessDiscovery.util;
 
+import discovery.ProcessDiscovery.it.unicam.pros.colliery.core.XESUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -12,6 +13,11 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class XmlUtil {
 
@@ -60,5 +66,84 @@ public class XmlUtil {
             }
         }
         return false;
+    }
+
+    //BY colliery
+    public static GatewayAndNodes getTasksInCompetition(String xml) {
+        Document dom = XESUtils.convertStringToXMLDocument(xml);
+
+        List<Node> xorGateways = new ArrayList<>();
+        List<List<String>> setOfNodesInCompetition = new ArrayList<>();
+
+        NodeList exclusives = XESUtils.findByExpr(dom, "/definitions/process/exclusiveGateway[@gatewayDirection=\"Diverging\"]");
+
+        for (int i = 0; i < exclusives.getLength(); i++) {
+            Node exclusive = exclusives.item(i);
+            NodeList exChilds = exclusive.getChildNodes();
+            Set<String> outgoing = new HashSet<>();
+            for (int j = 0; j < exChilds.getLength(); j++) {
+                if (exChilds.item(j).getNodeName().equals("outgoing") || exChilds.item(j).getNodeName().equals("bpmn:outgoing"))
+                    outgoing.add(exChilds.item(j).getTextContent());
+            }
+            boolean isEventBased = true;
+            List<String> eventsInCompetition = new ArrayList<>();
+            for (String sF : outgoing) {
+                Node sFnode = XESUtils.findProcNode(dom, "*", "id", sF);
+                String targetId = sFnode.getAttributes().getNamedItem("targetRef").getNodeValue();
+                Node target = XESUtils.findProcNode(dom, "*", "id", targetId);
+                String targetType = target.getNodeName();
+                if (targetType.contains("receiveTask") || targetType.contains("intermediateCatchEvent")) {
+                    if(target.getAttributes()!=null && target.getAttributes().getNamedItem("name")!=null){
+                        eventsInCompetition.add(target.getAttributes().getNamedItem("name").getNodeValue());
+                    }
+                } else {
+                    isEventBased = false;
+                }
+
+            }
+            if (isEventBased){
+                setOfNodesInCompetition.add(eventsInCompetition);
+                xorGateways.add(exclusive);
+            }
+        }
+        return new GatewayAndNodes(xorGateways,setOfNodesInCompetition);
+    }
+
+    //BY Colliery
+    public static String convertXorGateways(String xml, List<Node> gateways, List<String> tasksToNotTransform) {
+
+        Document dom = XESUtils.convertStringToXMLDocument(xml);
+        gateways = gateways.stream().filter(gateway->convertGateway(gateway,dom,tasksToNotTransform)).collect(Collectors.toList());
+        List<String> exclusiveToEventBased = gateways.stream().map(XESUtils::node2string).collect(Collectors.toList());
+
+        for (String excl : exclusiveToEventBased) {
+            excl = excl.replace("<?xml version=\"1.0\" encoding=\"UTF-8\"?>", "");
+            String evB = excl.replaceAll("exclusiveGateway", "eventBasedGateway");
+            xml = xml.replace(excl, evB);
+        }
+
+        return xml;
+    }
+
+    //BY colliery
+    public static boolean convertGateway(Node gateway, Document dom, List<String> tasksToNotTransform){
+        NodeList childNotes = gateway.getChildNodes();
+        Set<String> outgoing = new HashSet<>();
+        for (int j = 0; j<childNotes.getLength(); j++){
+            if(childNotes.item(j).getNodeName().equals("outgoing") || childNotes.item(j).getNodeName().equals("bpmn:outgoing")) outgoing.add(childNotes.item(j).getTextContent());
+        }
+        boolean convertGateway = true;
+        for (String sF : outgoing){
+            Node sFnode = XESUtils.findProcNode(dom, "*", "id", sF);
+            String targetId = sFnode.getAttributes().getNamedItem("targetRef").getNodeValue();
+            Node target = XESUtils.findProcNode(dom, "*", "id", targetId);
+            String targetType = target.getNodeName();
+            if (targetType.contains("receiveTask") || targetType.contains("intermediateCatchEvent")){
+                String name = target.getAttributes().getNamedItem("name").getNodeValue();
+                if(tasksToNotTransform.stream().anyMatch(task->task.equals(name))){
+                    convertGateway = false;
+                }
+            }}
+        return convertGateway;
     }
 }

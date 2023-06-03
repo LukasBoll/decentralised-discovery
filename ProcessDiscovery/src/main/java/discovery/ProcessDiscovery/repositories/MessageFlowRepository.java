@@ -9,4 +9,7 @@ import java.util.UUID;
 
 @Repository
 public interface MessageFlowRepository extends JpaRepository<MessageFlow, UUID> {
+
+    public MessageFlow getFirstByReceiveTask(String task);
+    public MessageFlow getFirstByName(String name);
 }

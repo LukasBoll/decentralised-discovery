@@ -1,22 +1,22 @@
 package discovery.ProcessDiscovery.services;
 
-import discovery.ProcessDiscovery.ProcessDiscoveryApplication;
 import discovery.ProcessDiscovery.it.unicam.pros.colliery.core.*;
 import discovery.ProcessDiscovery.models.*;
 import discovery.ProcessDiscovery.repositories.AuthorizationRepository;
 import discovery.ProcessDiscovery.repositories.CommunicationEventRepository;
 import discovery.ProcessDiscovery.repositories.MessageFlowRepository;
+import discovery.ProcessDiscovery.util.GatewayAndNodes;
 import discovery.ProcessDiscovery.util.WebUtil;
 import discovery.ProcessDiscovery.util.XmlUtil;
 import org.camunda.bpm.model.bpmn.Bpmn;
 import org.camunda.bpm.model.bpmn.BpmnModelInstance;
-import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
@@ -62,21 +62,104 @@ public class DecentralisedDiscoveryService {
         System.out.println("discover");
         try {
             Pm4PyBridge.checkScripts();
-            String privateModel = minePrivateModel();
-            stringToFile(new File(Path.of(System.getProperty("user.dir"), privateModelPath).toString()), privateModel);
-            System.out.println("Private Model: Serialization completed at " + Path.of(System.getProperty("user.dir"), privateModelPath).toString() + "\n");
-            generatePubLog();
-            String publicModel = minePublicModel();
-            stringToFile(new File(Path.of(System.getProperty("user.dir"), publicModelPath).toString()), publicModel);
-            System.out.println("Public Model: Serialization completed at " + Path.of(System.getProperty("user.dir"), publicModelPath).toString() + "\n");
+            Communication communications = new Communication();
+            String privateModel = minePrivateModel(communications);
 
-            getLostMessagesL();//TODO
-            getRC();//TODO
-            transformB();//TODO
+            saveCommunicationEvents(communications);
+            saveMessageFlowM();
+
+            communications = new Communication();
+            generatePubLog();
+            String publicModel = minePublicModel(communications);
+
+            ArrayList<String> lostMessageFlows = getLostMessagesL(communications);
+            GatewayAndNodes gatewayAndNodesPrivateModel = getRC(privateModel, lostMessageFlows);
+            GatewayAndNodes gatewayAndNodesPublicModel = getRC(publicModel, lostMessageFlows);
+
+
+            List<List<String>> raceConditions = gatewayAndNodesPrivateModel.getTasksInCompetition();
+            privateModel = transformationB(privateModel, lostMessageFlows, raceConditions, gatewayAndNodesPrivateModel.getXorGateways());
+
+            publicModel = transformationB(publicModel, lostMessageFlows, raceConditions, gatewayAndNodesPublicModel.getXorGateways());
+
+            stringToFile(new File(Path.of(System.getProperty("user.dir"), privateModelPath).toString()), privateModel);
+            stringToFile(new File(Path.of(System.getProperty("user.dir"), publicModelPath).toString()), publicModel);
+
 
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private String transformationB(String model, ArrayList<String> lostMessageFlows, List<List<String>> rcs, List<Node> xorGateways) {
+
+        /*transform all tasks except:
+        tasks in lost message list, that are NOT in the list of race conditions
+         */
+        List<String>tasksToNotTransform = new ArrayList<>();
+        //
+        for (String mf : lostMessageFlows) {
+            tasksToNotTransform.add(messageFlowRepository.getFirstByName(mf).getReceiveTask());
+        }
+        tasksToNotTransform=tasksToNotTransform.stream().filter(task->
+            rcs.stream().anyMatch(rc->rc.stream().anyMatch(receiveTask->receiveTask.equals(task)))).collect(Collectors.toList());
+
+        return XmlUtil.convertXorGateways(model,xorGateways, tasksToNotTransform);
+    }
+
+    private GatewayAndNodes getRC(String model, ArrayList<String> lostMessageFlows) {
+        GatewayAndNodes gatewayAndNodes = XmlUtil.getTasksInCompetition(model);
+        List<List<String>> tasksInCompetition = gatewayAndNodes.getTasksInCompetition();
+        tasksInCompetition= tasksInCompetition.stream().filter(this::isRaceCondition).collect(Collectors.toList());
+        return new GatewayAndNodes(gatewayAndNodes.getXorGateways(),tasksInCompetition);
+
+    }
+
+    private boolean isRaceCondition(List<String> tasks) {
+        List<CommunicationEvent> competingSendEvents = new ArrayList<>();
+        List<CommunicationEvent> competingReceiveEvents = new ArrayList<>();
+
+        for (String task : tasks) {
+            MessageFlow msgFlow = messageFlowRepository.getFirstByReceiveTask(task);
+            competingSendEvents.addAll(communicationEventRepository.findAllByFlowAndType(msgFlow.getName(), SEND));
+            competingReceiveEvents.addAll(communicationEventRepository.findAllByFlowAndType(msgFlow.getName(), RECEIVE));
+        }
+
+        competingSendEvents.sort(Comparator.comparing(CommunicationEvent::getDate));
+        competingReceiveEvents.sort(Comparator.comparing(CommunicationEvent::getDate));
+
+        boolean isRC = true;
+
+        while(competingSendEvents.size()>0 && competingReceiveEvents.size()>0){
+            CommunicationEvent sendingEventWaitingForConsumption = competingSendEvents.get(0);
+            CommunicationEvent nextReceiveEvent = competingReceiveEvents.get(0);
+            if(sendingEventWaitingForConsumption.getFlow().equals(nextReceiveEvent.getFlow())){
+                competingSendEvents = competingSendEvents.stream().filter(e->e.getDate().after(nextReceiveEvent.getDate())).collect(Collectors.toList());
+                competingReceiveEvents.remove(0);
+            }
+            else{
+                isRC = false;
+                break;
+            }
+        }
+
+        return isRC;
+    }
+
+    private ArrayList<String> getLostMessagesL(Communication communications) {
+        Map<String, MsgConnections> comTypes = communications.getMsgFlows();
+
+        ArrayList<String> setOfLostMessages = new ArrayList<>();
+        comTypes.keySet().forEach(msgFlow-> {
+                    System.out.println(communicationEventRepository.findAllByFlowAndType(msgFlow, SEND).size());
+            System.out.println(communicationEventRepository.findAllByFlowAndType(msgFlow, RECEIVE).size());
+            if(communicationEventRepository.findAllByFlowAndType(msgFlow, SEND).size()
+                            != communicationEventRepository.findAllByFlowAndType(msgFlow, RECEIVE).size()){
+                        setOfLostMessages.add(msgFlow);
+                    }
+                }
+        );
+        return setOfLostMessages;
     }
 
     private void generatePubLog() throws ParserConfigurationException, IOException, SAXException {
@@ -95,35 +178,24 @@ public class DecentralisedDiscoveryService {
         }
     }
 
-    private String minePublicModel() throws Exception {
+    private String minePublicModel(Communication communications) throws Exception {
 
         System.out.println("Public Model: Start Mining");
-        Communication communications = new Communication();
-        return mineModel(Path.of(System.getProperty("user.dir"), interactingLogPath).toString(), DiscoveryAlgorithm.ALPHA, communications);
-
+        String publicModel = mineModel(Path.of(System.getProperty("user.dir"), interactingLogPath).toString(), DiscoveryAlgorithm.ALPHA, communications);
+        publicModel = BPMNUtils.convertStartEndMessageEvents(publicModel);
+        return publicModel;
     }
 
 
-    private String minePrivateModel() throws Exception {
+    private String minePrivateModel(Communication communications) throws Exception {
 
         System.out.println("Private Model: Start Mining");
-        Communication communications = new Communication();
         String privateModel = mineModel(Path.of(System.getProperty("user.dir"), srcLogPath).toString(), DiscoveryAlgorithm.ALPHA, communications);
-
-        saveCommunicationEvents(communications);
-        saveMessageFlowM();
+        privateModel = BPMNUtils.convertStartEndMessageEvents(privateModel);
 
         return privateModel;
     }
 
-    private void getRC() {
-    }
-
-    private void getLostMessagesL() {
-    }
-
-    private void transformB() {
-    }
 
     private void saveMessageFlowM() {
         List<CommunicationEvent> communicationEvents = communicationEventRepository.findAll();
@@ -251,7 +323,7 @@ public class DecentralisedDiscoveryService {
                 //combineBPM
                 List<String> modelStringList = new LinkedList(List.of(XESUtils.convertXMLToString(coModel),XESUtils.convertXMLToString(result.getModel())));
                 coModel = XESUtils.convertStringToXMLDocument(BPMNUtils.groupProcesses(modelStringList));
-                //addMsg
+                //addMsgtoModel
                 for (MessageFlow msg : messageFromToOrganization) {
                     BPMNUtils.makeMsgFlow(coModel, msg.getName(), msg.getSendTask(), msg.getReceiveTask());
                 }
