@@ -349,13 +349,29 @@ public class BPMNUtils {
 
     public static String makeMsgFlow(String xml, String msg, String source, String target) {
         Document dom  = XESUtils.convertStringToXMLDocument(xml);
-        return XESUtils.convertXMLToString(makeMsgFlow(dom,msg,source,target));
+        return XESUtils.convertXMLToString(makeMsgFlow(dom,msg,source,target,"",""));
     }
 
-    public static Document makeMsgFlow(Document dom, String msg, String source, String target) {
+    public static Document makeMsgFlow(Document dom, String msg, String source, String target, String sender, String receiver) {
 
         Node sou = XESUtils.findProcNode(dom, "*" ,"name", source);
+        if(sou == null){
+            NodeList participants = dom.getElementsByTagName("participant");
+            for(int i = 0; i<participants.getLength();i++){
+                if(participants.item(i).getAttributes().getNamedItem("name").getNodeValue().equals(sender)){
+                    sou = participants.item(i);
+                }
+            }
+        }
         Node tar = XESUtils.findProcNode(dom, "*","name", target);
+        if(tar == null){
+            NodeList participants = dom.getElementsByTagName("participant");
+            for(int i = 0; i<participants.getLength();i++){
+                if(participants.item(i).getAttributes().getNamedItem("name").getNodeValue().equals(receiver)){
+                    tar = participants.item(i);
+                }
+            }
+        }
         if(sou == null || tar == null) return dom;
         String sID = sou.getAttributes().getNamedItem("id").getNodeValue();
         String tID = tar.getAttributes().getNamedItem("id").getNodeValue();

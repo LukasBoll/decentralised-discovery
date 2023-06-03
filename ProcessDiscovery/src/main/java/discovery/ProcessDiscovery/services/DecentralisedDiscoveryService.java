@@ -325,7 +325,7 @@ public class DecentralisedDiscoveryService {
                 coModel = XESUtils.convertStringToXMLDocument(BPMNUtils.groupProcesses(modelStringList));
                 //addMsgtoModel
                 for (MessageFlow msg : messageFromToOrganization) {
-                    BPMNUtils.makeMsgFlow(coModel, msg.getName(), msg.getSendTask(), msg.getReceiveTask());
+                    BPMNUtils.makeMsgFlow(coModel, msg.getName(), msg.getSendTask(), msg.getReceiveTask(),msg.getSender(),msg.getReceiver());
                 }
                 //insert newmsg
                 insertIfNotExistsInModel(unconnectedMessageMap,result.getMessageFlows(),coModel);
