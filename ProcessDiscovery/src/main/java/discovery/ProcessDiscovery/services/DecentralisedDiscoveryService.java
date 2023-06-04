@@ -307,12 +307,23 @@ public class DecentralisedDiscoveryService {
         while(!unconnectedMessageMap.isEmpty()){
             String organizationToRequestId = unconnectedMessageMap.keySet().iterator().next();
             List<MessageFlow> messageFromToOrganization = unconnectedMessageMap.get(organizationToRequestId);
-            NodeList tasks = coModel.getElementsByTagName("bpmn:task");
-            List<String> entryPoints = messageFromToOrganization.stream().map(mf->
-                XmlUtil.isInTasks(mf.getReceiveTask(),tasks)?mf.getSendTask():mf.getReceiveTask()
-                ).collect(Collectors.toList());
+
+            //NodeList tasks = coModel.getElementsByTagName("bpmn:process").item(0).getChildNodes();
+            //List<String> entryPoints = messageFromToOrganization.stream().map(mf->
+            //    XmlUtil.isInTasks(mf.getReceiveTask(),tasks)?mf.getSendTask():mf.getReceiveTask()
+            //    ).collect(Collectors.toList());
+
 
             Organization organizationToRequest = authorizationRepository.getReferenceById(organizationToRequestId);
+
+            List<String> entryPoints = messageFromToOrganization.stream().map(mf->{
+               if(mf.getReceiver().equals(organizationToRequestId)){
+                   return mf.getReceiveTask();
+               }else{
+                   return mf.getSendTask();
+               }
+            }).collect(Collectors.toList());
+
             String address = routingService.getAddress(organizationToRequest);
 
             RestTemplate restTemplate = new RestTemplate();
@@ -338,16 +349,58 @@ public class DecentralisedDiscoveryService {
     }
 
     public void insertIfNotExistsInModel(Map<String,List<MessageFlow>> map, List<MessageFlow> unconnectedMessages,Document model){
-        NodeList tasks = model.getElementsByTagName("bpmn:task");
+
+        NodeList processes = model.getElementsByTagName("bpmn:process");
+        unconnectedMessages.forEach( mf -> {
+            boolean sendTaskPresent = false;
+            boolean receiveTaskPresent = false;
+                    for (int i = 0; i < processes.getLength(); i++) {
+                        NodeList elementsOfProcess = processes.item(i).getChildNodes();
+                        for (int j = 0; j < elementsOfProcess.getLength(); j++) {
+                            if (elementsOfProcess.item(j).getAttributes() != null
+                                    && elementsOfProcess.item(j).getAttributes().getNamedItem("name") != null
+                            ) {
+                                String name = elementsOfProcess.item(j).getAttributes().getNamedItem("name").getNodeValue();
+                                if(name.equals(mf.getSendTask())){
+                                    sendTaskPresent=true;
+                                }
+                                if(name.equals(mf.getReceiveTask())){
+                                    receiveTaskPresent=true;
+                                }
+                            }
+                        }
+                    }
+            if(!sendTaskPresent){
+                if (map.get(mf.getSender()) != null) {
+                    boolean alreadyInMap = map.get(mf.getSender()).stream().anyMatch(messagesToFromOrganization -> messagesToFromOrganization.getName().equals(mf.getName()));
+                    if(!alreadyInMap) {
+                        map.get(mf.getSender()).add(mf);
+                    }
+                } else {
+                        map.put(mf.getSender(), new LinkedList<>(List.of(mf)));
+                }
+            }
+            if(!receiveTaskPresent){
+                if (map.get(mf.getReceiver()) != null) {
+                    boolean alreadyInMap = map.get(mf.getReceiver()).stream().anyMatch(messagesToFromOrganization -> messagesToFromOrganization.getName().equals(mf.getName()));
+                    if(!alreadyInMap) {
+                        map.get(mf.getReceiver()).add(mf);
+                    }
+                } else {
+                    map.put(mf.getReceiver(), new LinkedList<>(List.of(mf)));
+                }
+            }
+        });
+       /* NodeList tasks = model.getElementsByTagName("bpmn:task");
         unconnectedMessages.forEach(messageFlow -> {
             if(messageFlow.getReceiveTask()!=null && messageFlow.getSendTask()!=null) {
-                if (!XmlUtil.isInTasks(messageFlow.getReceiveTask(), tasks) && !messageFlow.getReceiver().equals(applicationID)) {
+                if (!XmlUtil.isInTasks(messageFlow.getReceiveTask(), tasks)) {
                     if (map.get(messageFlow.getReceiver()) != null) {
                         map.get(messageFlow.getReceiver()).add(messageFlow);
                     } else {
                         map.put(messageFlow.getReceiver(), new LinkedList<>(List.of(messageFlow)));
                     }
-                } else if (!XmlUtil.isInTasks(messageFlow.getSendTask(), tasks) && !messageFlow.getSender().equals(applicationID)) {
+                } else if (!XmlUtil.isInTasks(messageFlow.getSendTask(), tasks)) {
                     if (map.get(messageFlow.getSender()) != null) {
                         map.get(messageFlow.getSender()).add(messageFlow);
                     } else {
@@ -355,7 +408,7 @@ public class DecentralisedDiscoveryService {
                     }
                 }
             }
-        });
+        });*/
     }
 
     public Document getMinimumModel() throws ParserConfigurationException, IOException, SAXException {
@@ -389,13 +442,13 @@ public class DecentralisedDiscoveryService {
     private void calculateReachableTasks(String entryPoint, Document model, Map<String, Node> previousTasks, Map<String, Node> followingTasks) {
 
         Node node = null;
-        NodeList tasks = model.getElementsByTagName("bpmn:process").item(0).getChildNodes();
+        NodeList items = model.getElementsByTagName("bpmn:process").item(0).getChildNodes();
 
-        for (int i = 0;i<tasks.getLength();i++){
-            if(tasks.item(i).getAttributes() != null
-                    && tasks.item(i).getAttributes().getNamedItem("name") != null
-                    && tasks.item(i).getAttributes().getNamedItem("name").getNodeValue().equals(entryPoint)){
-                node = tasks.item(i);
+        for (int i = 0;i<items.getLength();i++){
+            if(items.item(i).getAttributes() != null
+                    && items.item(i).getAttributes().getNamedItem("name") != null
+                    && items.item(i).getAttributes().getNamedItem("name").getNodeValue().equals(entryPoint)){
+                node = items.item(i);
             }
         }
 
