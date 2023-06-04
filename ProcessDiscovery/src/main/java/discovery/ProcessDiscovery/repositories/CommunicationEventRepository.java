@@ -11,7 +11,7 @@ import java.util.UUID;
 @Repository
 public interface CommunicationEventRepository extends JpaRepository<CommunicationEvent, UUID> {
 
-    public List<CommunicationEvent> findAllBySenderOrReceiverAndOrganization(String senderId, String reviverId,String id);
+    public List<CommunicationEvent> findAllBySenderOrReceiver(String senderId, String reviverId);
 
     public List<CommunicationEvent> findAllByFlowAndType(String flow, MsgType type);
 }

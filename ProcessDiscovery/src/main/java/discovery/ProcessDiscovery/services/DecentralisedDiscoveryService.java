@@ -271,7 +271,8 @@ public class DecentralisedDiscoveryService {
             Set<CommEvent> communication = XESUtils.extractCommunication(0, srcLogPath);
             communicationEventRepository.saveAll(communication.stream().map(CommunicationEvent::fromCommEvent).collect(Collectors.toList()));
         }
-        return communicationEventRepository.findAllBySenderOrReceiverAndOrganization(id, id, applicationID);
+        return communicationEventRepository.findAllBySenderOrReceiver(id, id).stream().filter(communicationEvent -> communicationEvent.getOrganization().equals(applicationID)).collect(Collectors.toList());
+
     }
 
     public Document getPrivateModel() throws ParserConfigurationException, IOException, SAXException {
