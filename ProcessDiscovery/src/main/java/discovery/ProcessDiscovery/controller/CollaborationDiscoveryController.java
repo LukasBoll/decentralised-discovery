@@ -32,10 +32,10 @@ public class CollaborationDiscoveryController {
 
     @PostMapping("/collaboration/discover")
     public CollaborationDiscoverResponse discover(@RequestBody List<String> entryPoints, @RequestHeader(name = "Authorization") String token) throws ParserConfigurationException, IOException, SAXException {
-        System.out.println("Discover");
 
-        System.out.println(authenticationService.generateJwtToken());
         Organization organization = authenticationService.getOrganizationFromJwtToken(token);
+
+        System.out.println("discover request from"+organization.getId());
 
         Document model = switch (organization.getAuthorizationEnum()) {
             case PRIVATE -> decentralisedDiscoveryService.getPrivateModel();
@@ -56,8 +56,10 @@ public class CollaborationDiscoveryController {
 
     @RequestMapping(value = "/collaboration/communicationevent", method = RequestMethod.GET)
     public List<CommunicationEvent> degCommunicationEvent(@RequestHeader(name = "Authorization") String token) throws IOException {
-        System.out.println(authenticationService.generateJwtToken());
 
-        return decentralisedDiscoveryService.getCommunicationEvents(authenticationService.getOrganizationIDFromJwtToken(token));
+        String organizationID = authenticationService.getOrganizationIDFromJwtToken(token);
+        List<CommunicationEvent> result = decentralisedDiscoveryService.getCommunicationEvents(organizationID);
+        System.out.println("Sending CommunicationEvents to "+organizationID);
+        return result;
     }
 }

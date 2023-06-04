@@ -24,8 +24,6 @@ public class AuthenticationService {
     }
 
     public String getOrganizationIDFromJwtToken(String token) {
-        System.out.println(token);
-        System.out.println(token.substring(7));
         return Jwts.parserBuilder().setSigningKey(key()).build()
                 .parseClaimsJws(token.substring(7)).getBody().getSubject();
     }
