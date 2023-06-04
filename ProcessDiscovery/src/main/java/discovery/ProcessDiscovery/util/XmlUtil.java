@@ -1,7 +1,6 @@
 package discovery.ProcessDiscovery.util;
 
 import discovery.ProcessDiscovery.it.unicam.pros.colliery.core.XESUtils;
-import org.hibernate.grammars.hql.HqlParser;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -48,14 +47,16 @@ public class XmlUtil {
             for (int j = 0; eventChildren.getLength() > j; j++) {
                 Node eventChild = eventChildren.item(j);
                 NamedNodeMap attributes = eventChild.getAttributes();
+
                 if (attributes != null && attributes.getNamedItem("key") != null && attributes.getNamedItem("key").getNodeValue() != null
-                        && attributes.getNamedItem("key").getNodeValue().equalsIgnoreCase("msgName")) {
+                        && attributes.getNamedItem("key").getNodeValue().equals("msgInstanceId")) {
+
                     isInteracting = true;
-                    break;
                 }
             }
             if(!isInteracting) {
                 eventNode.getParentNode().removeChild(eventNode);
+                i--;
             };
         }
     }
