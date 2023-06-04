@@ -57,6 +57,13 @@ public class CollaborationDiscoveryController {
     @RequestMapping(value = "/collaboration/communicationevent", method = RequestMethod.GET)
     public List<CommunicationEvent> degCommunicationEvent(@RequestHeader(name = "Authorization") String token) throws IOException {
 
+        System.out.println(authenticationService.generateJwtToken("CarManufacturerID"));
+        System.out.println(authenticationService.generateJwtToken("SupplierID"));
+        System.out.println(authenticationService.generateJwtToken("TestDriverID"));
+        System.out.println(authenticationService.generateJwtToken("TesterID"));
+        System.out.println(authenticationService.generateJwtToken("SoftwareCompanyID"));
+
+
         String organizationID = authenticationService.getOrganizationIDFromJwtToken(token);
         List<CommunicationEvent> result = decentralisedDiscoveryService.getCommunicationEvents(organizationID);
         System.out.println("Sending CommunicationEvents to "+organizationID);

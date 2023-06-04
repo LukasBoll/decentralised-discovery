@@ -32,10 +32,10 @@ public class AuthenticationService {
         return Keys.hmacShaKeyFor(Decoders.BASE64.decode(jwtSecret));
     }
 
-    public String generateJwtToken() {
+    public String generateJwtToken(String id) {
 
         return Jwts.builder()
-                .setSubject(("SupplierID"))
+                .setSubject(("id"))
                 .signWith(key(), SignatureAlgorithm.HS256)
                 .compact();
     }
