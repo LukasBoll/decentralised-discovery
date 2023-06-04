@@ -34,7 +34,6 @@ public class CollaborationDiscoveryController {
     public CollaborationDiscoverResponse discover(@RequestBody List<String> entryPoints, @RequestHeader(name = "Authorization") String token) throws ParserConfigurationException, IOException, SAXException {
         System.out.println("Discover");
 
-        System.out.println(authenticationService.generateJwtToken());
         Organization organization = authenticationService.getOrganizationFromJwtToken(token);
 
         Document model = switch (organization.getAuthorizationEnum()) {
@@ -56,7 +55,6 @@ public class CollaborationDiscoveryController {
 
     @RequestMapping(value = "/collaboration/communicationevent", method = RequestMethod.GET)
     public List<CommunicationEvent> degCommunicationEvent(@RequestHeader(name = "Authorization") String token) throws IOException {
-        System.out.println(authenticationService.generateJwtToken());
 
         return decentralisedDiscoveryService.getCommunicationEvents(authenticationService.getOrganizationIDFromJwtToken(token));
     }
