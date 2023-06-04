@@ -59,7 +59,6 @@ public class DecentralisedDiscoveryService {
 
 
     public void buildModels() {
-        System.out.println("discover");
         try {
             Pm4PyBridge.checkScripts();
             Communication communications = new Communication();
@@ -85,6 +84,7 @@ public class DecentralisedDiscoveryService {
             stringToFile(new File(Path.of(System.getProperty("user.dir"), privateModelPath).toString()), privateModel);
             stringToFile(new File(Path.of(System.getProperty("user.dir"), publicModelPath).toString()), publicModel);
 
+            System.out.println("created Public and private model");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -246,16 +246,10 @@ public class DecentralisedDiscoveryService {
 
     private String mineModel(String pathToXESFile, DiscoveryAlgorithm algo, Communication communications) throws Exception {
         BpmnModelInstance process = null;
-        System.out.println("Discovery on " + pathToXESFile + " with " + algo + "...");
         process = discovery(pathToXESFile, algo);
-        System.out.println("Discovery on " + pathToXESFile + " completed.\n");
-        System.out.println("Extract communication from " + pathToXESFile + "...");
         communications.addAll(0, XESUtils.extractCommunication(0, pathToXESFile));
-        System.out.println("Extraction from" + pathToXESFile + " completed.\n");
-        System.out.println("Convert communication events for " + pathToXESFile + "...");
         String proc = Bpmn.convertToString(process);
         proc = convertCommunicationEvents(proc, communications, 0);
-        System.out.println("Convertion on " + pathToXESFile + " completed.\n");
         return proc;
     }
 
@@ -276,10 +270,12 @@ public class DecentralisedDiscoveryService {
     }
 
     public Document getPrivateModel() throws ParserConfigurationException, IOException, SAXException {
+        System.out.println("Get Private Model");
         return getLocalModel(privateModelPath);
     }
 
     public Document getPublicModel() throws ParserConfigurationException, IOException, SAXException {
+        System.out.println("Get Public Model");
         return getLocalModel(publicModelPath);
     }
 
@@ -290,7 +286,6 @@ public class DecentralisedDiscoveryService {
         try {
             log = db.parse(new File(Path.of(System.getProperty("user.dir"), path).toString()));
         } catch (SAXException | IOException e) {
-            e.printStackTrace();
             buildModels();
             log = db.parse(new File(Path.of(System.getProperty("user.dir"), path).toString()));
         }
@@ -308,12 +303,6 @@ public class DecentralisedDiscoveryService {
         while(!unconnectedMessageMap.isEmpty()){
             String organizationToRequestId = unconnectedMessageMap.keySet().iterator().next();
             List<MessageFlow> messageFromToOrganization = unconnectedMessageMap.get(organizationToRequestId);
-
-            //NodeList tasks = coModel.getElementsByTagName("bpmn:process").item(0).getChildNodes();
-            //List<String> entryPoints = messageFromToOrganization.stream().map(mf->
-            //    XmlUtil.isInTasks(mf.getReceiveTask(),tasks)?mf.getSendTask():mf.getReceiveTask()
-            //    ).collect(Collectors.toList());
-
 
             Organization organizationToRequest = authorizationRepository.getReferenceById(organizationToRequestId);
 
@@ -349,7 +338,6 @@ public class DecentralisedDiscoveryService {
             unconnectedMessageMap.remove(organizationToRequestId);
         }
         stringToFile(new File(Path.of(System.getProperty("user.dir"), "coModel.bpmn").toString()), XESUtils.convertXMLToString(coModel));
-        System.out.println("CO Model: Serialization completed at " + Path.of(System.getProperty("user.dir"),"coModel.bpmn").toString() + "\n");
         return coModel;
     }
 
@@ -418,11 +406,13 @@ public class DecentralisedDiscoveryService {
 
     public Document getMinimumModel() throws ParserConfigurationException, IOException, SAXException {
         Document document = getPublicModel();
+        System.out.println("Reduce Model to Minimum");
         XmlUtil.removeProcess(document);
         return document;
     }
 
     public void buildFragment(Document model, List<String> entryPoints) {
+        System.out.println("Building Fragment");
         Map<String, Node> previousTasks = new HashMap<>();
         Map<String, Node> followingTasks = new HashMap<>();
         entryPoints.forEach(entryPoint ->{
