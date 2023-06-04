@@ -25,6 +25,8 @@ public class XmlUtil {
                                 OutputStream output)
             throws TransformerException {
 
+        adjustView(doc);
+
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         Transformer transformer = transformerFactory.newTransformer();
 
@@ -35,6 +37,24 @@ public class XmlUtil {
 
         transformer.transform(source, result);
 
+    }
+
+    private static void adjustView(Document doc) {
+        NodeList waypoints = doc.getElementsByTagName("omgdi:waypoint");
+        int length = waypoints.getLength();
+        //=0
+        adjustPoints(waypoints);
+        NodeList bounds = doc.getElementsByTagName("omgdc:Bounds");
+        adjustPoints(bounds);
+    }
+
+    private static void  adjustPoints(NodeList waypoints){
+        for (int i = 0; i<waypoints.getLength();i++){
+            String x = waypoints.item(i).getAttributes().getNamedItem("x").getNodeValue();
+            String y = waypoints.item(i).getAttributes().getNamedItem("y").getNodeValue();
+            waypoints.item(i).getAttributes().getNamedItem("x").setNodeValue(String.valueOf(Double.parseDouble(x)/10));
+            waypoints.item(i).getAttributes().getNamedItem("y").setNodeValue(String.valueOf(Double.parseDouble(y)/10));
+        }
     }
 
     public static void filterNonInteracting(Document log){
