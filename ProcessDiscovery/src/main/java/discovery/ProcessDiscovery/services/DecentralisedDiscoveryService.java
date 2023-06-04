@@ -234,6 +234,8 @@ public class DecentralisedDiscoveryService {
                     RestTemplate restTemplate = new RestTemplate();
                     HttpEntity<String> entity= new HttpEntity<>("", WebUtil.generateHeaders(organization));
 
+                    System.out.println("Get Communicationevents from "+organization.getId());
+
                     ResponseEntity<CommunicationEvent[]> result = restTemplate.exchange(address + "/collaboration/communicationevent", HttpMethod.GET, entity, CommunicationEvent[].class);
                     if (result.getBody() != null) {
                         communicationEventRepository.saveAll(Arrays.stream(result.getBody()).toList());
