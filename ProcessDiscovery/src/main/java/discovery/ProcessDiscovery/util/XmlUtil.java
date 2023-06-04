@@ -1,6 +1,7 @@
 package discovery.ProcessDiscovery.util;
 
 import discovery.ProcessDiscovery.it.unicam.pros.colliery.core.XESUtils;
+import org.hibernate.grammars.hql.HqlParser;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -147,6 +148,19 @@ public class XmlUtil {
                 }
             }}
         return convertGateway;
+    }
+
+    public static Node findById(Document doc, String id){
+        NodeList nodes = doc.getElementsByTagName("bpmn:process").item(0).getChildNodes();
+        for(int i =0; i< nodes.getLength();i++){
+            Node node = nodes.item(i);
+            if(node.getAttributes() != null
+            && node.getAttributes().getNamedItem("id")!=null
+            && id.equals(node.getAttributes().getNamedItem("id").getNodeValue())){
+                return node;
+            }
+        }
+        return null;
     }
 
     public static void removeProcess(Document document) {

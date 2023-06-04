@@ -363,4 +363,83 @@ public class DecentralisedDiscoveryService {
         XmlUtil.removeProcess(document);
         return document;
     }
+
+    public void buildFragment(Document model, List<String> entryPoints) {
+        Map<String, Node> previousTasks = new HashMap<>();
+        Map<String, Node> followingTasks = new HashMap<>();
+        entryPoints.forEach(entryPoint ->{
+            calculateReachableTasks(entryPoint,model,previousTasks,followingTasks);
+        });
+        //filter Tasks
+        NodeList tasks = model.getElementsByTagName("bpmn:process").item(0).getChildNodes();
+        for(int i = 0; i< tasks.getLength();i++){
+            filter(tasks.item(i),previousTasks,followingTasks);
+        }
+    }
+
+    private void filter(Node item, Map<String, Node> previousTasks, Map<String, Node> followingTasks) {
+        if(item.getAttributes()!=null
+                && item.getAttributes().getNamedItem("id") != null
+                &&previousTasks.get(item.getAttributes().getNamedItem("id").getNodeValue())==null
+                && followingTasks.get(item.getAttributes().getNamedItem("id").getNodeValue())==null){
+            item.getParentNode().removeChild(item);
+        }
+    }
+
+    private void calculateReachableTasks(String entryPoint, Document model, Map<String, Node> previousTasks, Map<String, Node> followingTasks) {
+
+        Node node = null;
+        NodeList tasks = model.getElementsByTagName("bpmn:process").item(0).getChildNodes();
+
+        for (int i = 0;i<tasks.getLength();i++){
+            if(tasks.item(i).getAttributes() != null
+                    && tasks.item(i).getAttributes().getNamedItem("name") != null
+                    && tasks.item(i).getAttributes().getNamedItem("name").getNodeValue().equals(entryPoint)){
+                node = tasks.item(i);
+            }
+        }
+
+        addFollowing(model, node,followingTasks);
+
+        addPrevious(model, node,previousTasks);
+
+
+
+    }
+
+    private void addPrevious(Document model, Node item, Map<String, Node> reachableTasks) {
+        reachableTasks.put(item.getAttributes().getNamedItem("id").getNodeValue(), item);
+        if(item.getNodeName().equals("bpmn:sequenceFlow")){
+            String id = item.getAttributes().getNamedItem("sourceRef").getNodeValue();
+            addPrevious(model,XmlUtil.findById(model,id),reachableTasks);
+        }else {
+            NodeList childNodes = item.getChildNodes();
+            for (int i = 0; i < childNodes.getLength(); i++) {
+                if (childNodes.item(i).getNodeName().equals("bpmn:incoming")) {
+                    String id = childNodes.item(i).getTextContent();
+                    if (reachableTasks.get(id) == null) {
+                        addPrevious(model, XmlUtil.findById(model,id), reachableTasks);
+                    }
+                }
+            }
+        }
+    }
+
+    private void addFollowing(Document model, Node item, Map<String, Node> reachableTasks) {
+        reachableTasks.put(item.getAttributes().getNamedItem("id").getNodeValue(), item);
+        if(item.getNodeName().equals("bpmn:sequenceFlow")){
+            String id = item.getAttributes().getNamedItem("targetRef").getNodeValue();
+            addFollowing(model,XmlUtil.findById(model,id),reachableTasks);
+        }else {
+            NodeList childNodes = item.getChildNodes();
+            for (int i = 0; i < childNodes.getLength(); i++) {
+                if (childNodes.item(i).getNodeName().equals("bpmn:outgoing")) {
+                    String id = childNodes.item(i).getTextContent();
+                    if (reachableTasks.get(id) == null) {
+                        addFollowing(model, XmlUtil.findById(model,id), reachableTasks);
+                    }
+                }
+            }
+        }
+    }
 }
