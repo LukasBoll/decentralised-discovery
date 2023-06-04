@@ -419,16 +419,14 @@ public class DecentralisedDiscoveryService {
         //filter Tasks
         NodeList tasks = model.getElementsByTagName("bpmn:process").item(0).getChildNodes();
         for(int i = 0; i< tasks.getLength();i++){
-            filter(tasks.item(i),previousTasks,followingTasks);
-        }
-    }
-
-    private void filter(Node item, Map<String, Node> previousTasks, Map<String, Node> followingTasks) {
-        if(item.getAttributes()!=null
-                && item.getAttributes().getNamedItem("id") != null
-                &&previousTasks.get(item.getAttributes().getNamedItem("id").getNodeValue())==null
-                && followingTasks.get(item.getAttributes().getNamedItem("id").getNodeValue())==null){
-            item.getParentNode().removeChild(item);
+            Node item = tasks.item(i);
+            if(item.getAttributes()!=null
+                    && item.getAttributes().getNamedItem("id") != null
+                    &&previousTasks.get(item.getAttributes().getNamedItem("id").getNodeValue())==null
+                    && followingTasks.get(item.getAttributes().getNamedItem("id").getNodeValue())==null){
+                item.getParentNode().removeChild(item);
+                i--;
+            }
         }
     }
 
