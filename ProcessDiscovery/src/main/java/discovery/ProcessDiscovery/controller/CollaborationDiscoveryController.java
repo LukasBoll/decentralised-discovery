@@ -34,6 +34,7 @@ public class CollaborationDiscoveryController {
     public CollaborationDiscoverResponse discover(@RequestBody List<String> entryPoints, @RequestHeader(name = "Authorization") String token) throws ParserConfigurationException, IOException, SAXException {
         System.out.println("Discover");
 
+        System.out.println(authenticationService.generateJwtToken());
         Organization organization = authenticationService.getOrganizationFromJwtToken(token);
 
         Document model = switch (organization.getAuthorizationEnum()) {
@@ -47,9 +48,8 @@ public class CollaborationDiscoveryController {
         if(organization.getAuthorizationEnum()== AuthorizationEnum.PRIVATE ||
                 organization.getAuthorizationEnum()== AuthorizationEnum.PUBLIC){
             messages = messageFlowRepository.findAll();
+            decentralisedDiscoveryService.buildFragment(model,entryPoints);
         }
-
-        decentralisedDiscoveryService.buildFragment(model,entryPoints);
 
         return new CollaborationDiscoverResponse(model, messages);
     }
