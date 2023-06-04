@@ -48,6 +48,9 @@ public class CollaborationDiscoveryController {
                 organization.getAuthorizationEnum()== AuthorizationEnum.PUBLIC){
             messages = messageFlowRepository.findAll();
         }
+
+        decentralisedDiscoveryService.buildFragment(model,entryPoints);
+
         return new CollaborationDiscoverResponse(model, messages);
     }
 
