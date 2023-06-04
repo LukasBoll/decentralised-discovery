@@ -317,30 +317,34 @@ public class DecentralisedDiscoveryService {
 
             Organization organizationToRequest = authorizationRepository.getReferenceById(organizationToRequestId);
 
-            List<String> entryPoints = messageFromToOrganization.stream().map(mf->{
-               if(mf.getReceiver().equals(organizationToRequestId)){
-                   return mf.getReceiveTask();
-               }else{
-                   return mf.getSendTask();
-               }
-            }).collect(Collectors.toList());
+            try {
+                List<String> entryPoints = messageFromToOrganization.stream().map(mf -> {
+                    if (mf.getReceiver().equals(organizationToRequestId)) {
+                        return mf.getReceiveTask();
+                    } else {
+                        return mf.getSendTask();
+                    }
+                }).collect(Collectors.toList());
 
-            String address = routingService.getAddress(organizationToRequest);
+                String address = routingService.getAddress(organizationToRequest);
 
-            RestTemplate restTemplate = new RestTemplate();
-            HttpEntity<List<String>> entity= new HttpEntity<>(entryPoints, WebUtil.generateHeaders(organizationToRequest));
+                RestTemplate restTemplate = new RestTemplate();
+                HttpEntity<List<String>> entity = new HttpEntity<>(entryPoints, WebUtil.generateHeaders(organizationToRequest));
 
-            CollaborationDiscoverResponse result = restTemplate.postForObject(address + "/collaboration/discover", entity ,CollaborationDiscoverResponse.class);
-            if (result != null) {
-                //combineBPM
-                List<String> modelStringList = new LinkedList(List.of(XESUtils.convertXMLToString(coModel),XESUtils.convertXMLToString(result.getModel())));
-                coModel = XESUtils.convertStringToXMLDocument(BPMNUtils.groupProcesses(modelStringList));
-                //addMsgtoModel
-                for (MessageFlow msg : messageFromToOrganization) {
-                    BPMNUtils.makeMsgFlow(coModel, msg.getName(), msg.getSendTask(), msg.getReceiveTask(),msg.getSender(),msg.getReceiver());
+                CollaborationDiscoverResponse result = restTemplate.postForObject(address + "/collaboration/discover", entity, CollaborationDiscoverResponse.class);
+                if (result != null) {
+                    //combineBPM
+                    List<String> modelStringList = new LinkedList(List.of(XESUtils.convertXMLToString(coModel), XESUtils.convertXMLToString(result.getModel())));
+                    coModel = XESUtils.convertStringToXMLDocument(BPMNUtils.groupProcesses(modelStringList));
+                    //addMsgtoModel
+                    for (MessageFlow msg : messageFromToOrganization) {
+                        BPMNUtils.makeMsgFlow(coModel, msg.getName(), msg.getSendTask(), msg.getReceiveTask(), msg.getSender(), msg.getReceiver());
+                    }
+                    //insert newmsg
+                    insertIfNotExistsInModel(unconnectedMessageMap, result.getMessageFlows(), coModel);
                 }
-                //insert newmsg
-                insertIfNotExistsInModel(unconnectedMessageMap,result.getMessageFlows(),coModel);
+            }catch (Exception e){
+                e.printStackTrace();
             }
             unconnectedMessageMap.remove(organizationToRequestId);
         }
