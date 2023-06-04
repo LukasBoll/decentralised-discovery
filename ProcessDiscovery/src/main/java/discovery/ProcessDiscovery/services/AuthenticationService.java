@@ -35,7 +35,7 @@ public class AuthenticationService {
     public String generateJwtToken(String id) {
 
         return Jwts.builder()
-                .setSubject(("id"))
+                .setSubject((id))
                 .signWith(key(), SignatureAlgorithm.HS256)
                 .compact();
     }
