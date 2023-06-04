@@ -151,8 +151,6 @@ public class DecentralisedDiscoveryService {
 
         ArrayList<String> setOfLostMessages = new ArrayList<>();
         comTypes.keySet().forEach(msgFlow-> {
-                    System.out.println(communicationEventRepository.findAllByFlowAndType(msgFlow, SEND).size());
-            System.out.println(communicationEventRepository.findAllByFlowAndType(msgFlow, RECEIVE).size());
             if(communicationEventRepository.findAllByFlowAndType(msgFlow, SEND).size()
                             != communicationEventRepository.findAllByFlowAndType(msgFlow, RECEIVE).size()){
                         setOfLostMessages.add(msgFlow);
