@@ -307,7 +307,7 @@ public class DecentralisedDiscoveryService {
         while(!unconnectedMessageMap.isEmpty()){
             String organizationToRequestId = unconnectedMessageMap.keySet().iterator().next();
             List<MessageFlow> messageFromToOrganization = unconnectedMessageMap.get(organizationToRequestId);
-            NodeList tasks = coModel.getElementsByTagName("bpmn:task");
+            NodeList tasks = coModel.getElementsByTagName("bpmn:process").item(0).getChildNodes();
             List<String> entryPoints = messageFromToOrganization.stream().map(mf->
                 XmlUtil.isInTasks(mf.getReceiveTask(),tasks)?mf.getSendTask():mf.getReceiveTask()
                 ).collect(Collectors.toList());

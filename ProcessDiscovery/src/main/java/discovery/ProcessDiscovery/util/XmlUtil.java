@@ -61,7 +61,9 @@ public class XmlUtil {
 
     public static boolean isInTasks(String task, NodeList tasks) {
         for(int i =0; i<tasks.getLength();i++){
-            if(task.equals(tasks.item(i).getAttributes().getNamedItem("name").getNodeValue())){
+            if(tasks.item(i).getAttributes()!=null
+                    && tasks.item(i).getAttributes().getNamedItem("name") != null
+                    && task.equals(tasks.item(i).getAttributes().getNamedItem("name").getNodeValue())){
                 return true;
             }
         }
