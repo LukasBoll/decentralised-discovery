@@ -92,7 +92,11 @@ public class XmlUtil {
         return false;
     }
 
-    //BY colliery
+    /*
+     *   This Function is part of the Colliery_source Project from PROSLabTeam
+     *   https://bitbucket.org/proslabteam/colliery_source/src/master/
+     *   Thanks to Lorenzo Rossi for granting permissions
+     * */
     public static GatewayAndNodes getTasksInCompetition(String xml) {
         Document dom = XESUtils.convertStringToXMLDocument(xml);
 
@@ -133,7 +137,11 @@ public class XmlUtil {
         return new GatewayAndNodes(xorGateways,setOfNodesInCompetition);
     }
 
-    //BY Colliery
+    /*
+     *   This Function is part of the Colliery_source Project from PROSLabTeam
+     *   https://bitbucket.org/proslabteam/colliery_source/src/master/
+     *   Thanks to Lorenzo Rossi for granting permissions
+     * */
     public static String convertXorGateways(String xml, List<Node> gateways, List<String> tasksToNotTransform) {
 
         Document dom = XESUtils.convertStringToXMLDocument(xml);
@@ -149,7 +157,11 @@ public class XmlUtil {
         return xml;
     }
 
-    //BY colliery
+    /*
+     *   This Function is part of the Colliery_source Project from PROSLabTeam
+     *   https://bitbucket.org/proslabteam/colliery_source/src/master/
+     *   Thanks to Lorenzo Rossi for granting permissions
+     * */
     public static boolean convertGateway(Node gateway, Document dom, List<String> tasksToNotTransform){
         NodeList childNotes = gateway.getChildNodes();
         Set<String> outgoing = new HashSet<>();
